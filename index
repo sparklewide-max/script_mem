@@ -25,9 +25,6 @@
     --red: #c0392b;
     --red-bg: #fdf0ee;
     --red-border: #f0c0b8;
-    --purple: #6a3d9a;
-    --purple-bg: #f4eefb;
-    --purple-border: #d0b0f0;
     --orange: #c05800;
     --orange-bg: #fef4ea;
     --orange-border: #f0c888;
@@ -58,7 +55,6 @@
     overflow: hidden;
   }
 
-  /* ─── HEADER ─── */
   .header {
     background: var(--dark);
     color: white;
@@ -90,31 +86,13 @@
 
   .header-title span { color: #c8b86a; }
 
-  .header-right {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-
   .header-tip {
     font-size: 11px;
     color: rgba(255,255,255,0.5);
   }
 
-  /* ─── BODY ─── */
   .body { padding: 20px 24px 24px; }
 
-  /* ─── GRID ─── */
-  .main-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 14px;
-  }
-
-  .full-width { grid-column: 1 / -1; }
-
-  /* ─── CARD ─── */
   .card {
     border-radius: 10px;
     overflow: hidden;
@@ -141,26 +119,13 @@
 
   .card-body { padding: 12px 14px; }
 
-  /* ─── COLOR THEMES ─── */
   .theme-gold .card-head { background: var(--gold-bg); border-bottom: 1px solid var(--gold-border); color: var(--gold); }
   .theme-gold .card-head .icon { background: var(--gold-border); }
-
   .theme-blue .card-head { background: var(--blue-bg); border-bottom: 1px solid var(--blue-border); color: var(--blue); }
   .theme-blue .card-head .icon { background: var(--blue-border); }
-
   .theme-green .card-head { background: var(--green-bg); border-bottom: 1px solid var(--green-border); color: var(--green); }
   .theme-green .card-head .icon { background: var(--green-border); }
 
-  .theme-red .card-head { background: var(--red-bg); border-bottom: 1px solid var(--red-border); color: var(--red); }
-  .theme-red .card-head .icon { background: var(--red-border); }
-
-  .theme-purple .card-head { background: var(--purple-bg); border-bottom: 1px solid var(--purple-border); color: var(--purple); }
-  .theme-purple .card-head .icon { background: var(--purple-border); }
-
-  .theme-orange .card-head { background: var(--orange-bg); border-bottom: 1px solid var(--orange-border); color: var(--orange); }
-  .theme-orange .card-head .icon { background: var(--orange-border); }
-
-  /* ─── SCRIPT TEXT ─── */
   .script-block {
     background: #fafaf8;
     border: 1px solid var(--border);
@@ -170,7 +135,6 @@
     color: var(--mid);
     line-height: 1.8;
     margin-bottom: 8px;
-    position: relative;
   }
 
   .script-block:last-child { margin-bottom: 0; }
@@ -183,39 +147,11 @@
   .script-block strong { color: var(--dark); font-weight: 700; }
   .script-block em { color: var(--gold); font-style: normal; font-weight: 700; }
 
-  /* ─── BRANCH ─── */
-  .branch-wrap { margin-top: 8px; display: flex; flex-direction: column; gap: 5px; }
-
-  .branch {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 11.5px;
-    line-height: 1.7;
-  }
-
-  .branch-arrow {
-    flex-shrink: 0;
-    width: 18px; height: 18px;
-    border-radius: 4px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 10px;
-    margin-top: 2px;
-  }
-
-  .branch.yes .branch-arrow { background: var(--green-bg); color: var(--green); border: 1px solid var(--green-border); }
-  .branch.no .branch-arrow { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
-  .branch.maybe .branch-arrow { background: var(--orange-bg); color: var(--orange); border: 1px solid var(--orange-border); }
-
-  .branch-text { color: var(--mid); }
-  .branch-text strong { color: var(--dark); }
-
-  /* ─── DOWNSELL FLOW ─── */
   .downsell-flow {
     display: flex;
     align-items: stretch;
     gap: 0;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
   }
 
   .flow-step {
@@ -224,7 +160,6 @@
     border: 1px solid var(--border);
     border-radius: 8px;
     padding: 10px 11px;
-    position: relative;
   }
 
   .flow-step-num {
@@ -249,6 +184,7 @@
   }
 
   .flow-step-text em { color: var(--gold); font-style: normal; font-weight: 700; }
+  .flow-step-text strong { color: var(--dark); font-weight: 700; }
 
   .flow-arrow {
     display: flex;
@@ -264,7 +200,6 @@
   .flow-step.downsell { border-color: var(--blue-border); background: var(--blue-bg); }
   .flow-step.close { border-color: var(--green-border); background: var(--green-bg); }
 
-  /* ─── CASES GRID ─── */
   .cases-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -296,8 +231,6 @@
   .case-card.c1 .case-head .dot { background: var(--red); }
   .case-card.c2 .case-head { background: var(--orange-bg); color: var(--orange); border-bottom: 1px solid var(--orange-border); }
   .case-card.c2 .case-head .dot { background: var(--orange); }
-  .case-card.c3 .case-head { background: var(--purple-bg); color: var(--purple); border-bottom: 1px solid var(--purple-border); }
-  .case-card.c3 .case-head .dot { background: var(--purple); }
 
   .case-body { padding: 10px; }
 
@@ -340,7 +273,6 @@
   .cb-tag.no { background: var(--red-bg); color: var(--red); border: 1px solid var(--red-border); }
   .cb-tag.tip { background: #fffbe6; color: #8a6800; border: 1px solid #f0d860; }
 
-  /* ─── SECTION LABEL ─── */
   .section-label {
     font-size: 10px;
     font-weight: 700;
@@ -360,7 +292,6 @@
     background: var(--border);
   }
 
-  /* ─── FOOTER ─── */
   .footer {
     background: var(--dark);
     color: rgba(255,255,255,0.5);
@@ -373,7 +304,6 @@
 
   .footer strong { color: rgba(255,255,255,0.8); }
 
-  /* ─── TIP BOX ─── */
   .tip-box {
     background: #fffbe6;
     border: 1px solid #f0d860;
@@ -395,19 +325,17 @@
   <!-- HEADER -->
   <div class="header">
     <div class="header-left">
-      <div>
-        <div class="header-badge">Outbound Call Sheet</div>
-      </div>
+      <div class="header-badge">Outbound Call Sheet</div>
       <div class="header-title">멤버십 약정 프로모션 <span>콜 스크립트</span></div>
     </div>
-    <div class="header-right">
+    <div>
       <span class="header-tip">[ ] = 상황에 맞게 변경 &nbsp;|&nbsp; 🟡 = 4,000만원 앵커 &nbsp;|&nbsp; 🔵 = 2,000만원 다운셀</span>
     </div>
   </div>
 
   <div class="body">
 
-    <!-- SECTION 1: 다운셀 메인 플로우 -->
+    <!-- SECTION 1 -->
     <div class="section-label">① 메인 콜 플로우 — 4,000만원 앵커 → 2,000만원 다운셀</div>
 
     <div class="downsell-flow">
@@ -419,18 +347,18 @@
           지난주에 VIP멤버십 프로모션 문자 하나 발송드렸는데, 혹시 받아보셨을까요?<br><br>
           이번에 매출 규모 있으신 거래처 대상으로만 진행하는 건데요,<br>
           <em>월 4,000만원 약정 시 매달 최대 60만원 1.5% 예치금 쿠폰</em>에<br>
-          주문까지 완료 시 다음 달 바로 Black 등급까지 적용되는 구조예요.<br>"
+          주문까지 완료 시 다음 달 바로 Black 등급까지 적용되는 구조예요."
         </div>
       </div>
 
       <div class="flow-arrow">→</div>
 
-      <div class="flow-step" style="border-color: #e0e0e0; background: #f8f8f8; flex: 0.7;">
-        <div class="flow-step-num">⚡ STEP 2 · 반응 확인</div>
-        <div class="flow-step-title">반응 파악 및 Black 등급 혜택 추가 강조</div>
+      <div class="flow-step" style="border-color: #e0e0e0; background: #f8f8f8; flex: 0.75;">
+        <div class="flow-step-num">⚡ STEP 2 · 반응 확인 & Black 혜택 강조</div>
+        <div class="flow-step-title">추가 어필 후 반응 파악</div>
         <div class="flow-step-text">
-          "5월까지 3달동안 제공되고, 이후에는 BLACK등급으로 지속 혜택 받으실 수 있어요.<br>
-         월 4000만원 기준으로 BLACK등급 혜택 포함 시 멤버십 혜택으로 최대 6.1%까지 받아보실 수 있어요."<br><br>
+          "5월까지 3달 동안 제공되고, 이후에는 BLACK 등급으로 지속 혜택 받으실 수 있어요.<br>
+          월 4,000만원 기준 BLACK 등급 포함 시 <em>최대 6.1%</em>까지 받아보실 수 있어요."<br><br>
           ✅ 긍정적 → STEP 4 클로징<br>
           ❌ 망설임 → STEP 3 다운셀
         </div>
@@ -444,9 +372,9 @@
         <div class="flow-step-text">
           "아, 물론 4,000만원이 매월 확정 짓기엔 부담이 되실 수도 있죠.<br><br>
           사실 저희 프로모션이 <em>2,000만원부터도 동일한 구조</em>로 혜택이 들어가거든요.<br>
-          월 2,000만원이면 매달 <em>최대 30만원까지 할인 가능한 1.5% 2000만원 충전쿠폰</em>이고, 3개월이면 기본 90만원이에요.<br>
-          그냥 쓰시는 것만으로 카드혜택에 멤버십 혜택까지 붙는 거라 손해 보실 게 없는 구조예요.<br><br>
-          도매쪽 관계 때문에 부담스러우시면 우선은 2000만원부터 시작해보시는게 어떠신가요?"
+          월 2,000만원이면 매달 <em>최대 30만원 1.5% 예치금 쿠폰</em>이고, 3개월이면 90만원이에요.<br>
+          카드 혜택에 멤버십 혜택까지 붙는 구조라 손해 보실 게 없어요.<br><br>
+          도매 쪽 부담스러우시면 <strong>우선 2,000만원부터 시작해보시는 게 어떠세요?</strong>"
         </div>
       </div>
 
@@ -458,12 +386,13 @@
         <div class="flow-step-text">
           "신청은 간단하게 등급이랑 카드사만 고르시면 끝나거든요,<br>
           지금 바로 링크 문자로 보내드릴까요?"<br><br>
-          → 좋다 : <strong>링크 즉시 발송</strong><br>
+          → 좋다 : <strong>링크 즉시 발송</strong><br><br>
+          <strong>"자세한 신청 방법과 세부 내용은 문자로 한 번 더 안내드리겠습니다."</strong>
         </div>
       </div>
     </div>
 
-    <!-- SECTION 2: 케이스별 응대 -->
+    <!-- SECTION 2 -->
     <div class="section-label">② 케이스별 이의 응대</div>
 
     <div class="cases-grid">
@@ -479,19 +408,18 @@
             "아, 맞아요. 갑자기 약정이라고 하면<br>
             뭔가 추가로 더 써야 하는 것처럼 느껴지시죠.<br><br>
             근데 이게 추가로 더 쓰는 게 아니라,<br>
-            <strong>지금 주문하시는 것 중에 일부만 바로팜에서 그대로 주문하시면<br>
-            되는 개념</strong>이에요.<br><br>
-            어차피 전문약이나 OTC 주문은 매월 해야하니.<br>
+            <strong>지금 주문하시는 것 중 일부만 바로팜에서 그대로 주문하시면 되는 개념</strong>이에요.<br><br>
+            어차피 전문약이나 OTC 주문은 매월 해야 하니까요.<br>
             그 금액이 2,000만원 이상이시면<br>
-            매달 예치금 쿠폰과 함께 멤버십 혜택이 붙는 구조라서요."
+            매달 예치금 쿠폰과 멤버십 혜택이 붙는 구조라서요."
           </div>
           <div class="case-branch">
-            <div class="cb-tag yes">↑ YES</div>
+            <div class="cb-tag yes">YES</div>
             <div>2,000만원 이상이라고 하면 → <strong>신청 링크 즉시 발송</strong></div>
           </div>
           <div class="case-branch">
-            <div class="cb-tag no">↑ NO</div>
-            <div>그래도 망설이면 → <strong>"우선 참여링크 보내드릴테니, 고민해보시고 신청하시는 것 검토 부탁드립니다"</strong></div>
+            <div class="cb-tag no">NO</div>
+            <div>그래도 망설이면 → <strong>"우선 참여 링크 보내드릴게요, 고민해보시고 신청 검토 부탁드립니다."</strong></div>
           </div>
         </div>
       </div>
@@ -506,16 +434,31 @@
           <div class="case-script">
             "네, 당연히 내부 확인 필요하시죠.<br><br>
             혹시 검토하실 때 자료가 있으면 더 편하실 것 같아서요,<br>
-            방금 제가 페이지 링크랑 간단한 정리 내용을<br>
+            페이지 링크랑 간단한 정리 내용을<br>
             <strong>문자로 하나 남겨 드리겠습니다.</strong><br><br>
+            검토가 언제쯤 되실 것 같으세요?<br>
+            제가 <strong>[X일] 이후에 한 번 확인 연락드려도 괜찮을까요?</strong>"
+          </div>
+          <div class="case-branch">
+            <div class="cb-tag yes">날짜 확정</div>
+            <div>"감사합니다! 그럼 [날짜] [시간]에 연락드릴게요."</div>
+          </div>
+          <div class="case-branch">
+            <div class="cb-tag no">애매하면</div>
+            <div>"제가 <strong>이번 주 [요일]에 한 번만 확인드려도 될까요? 한 번만요!</strong>"</div>
+          </div>
+          <div class="case-branch">
+            <div class="cb-tag tip">💡 TIP</div>
+            <div>날짜를 고객에게 맡기면 연락 안 옴. <strong>반드시 내가 날짜 제안하고 확정 받을 것.</strong></div>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- 혜택 요약 바 -->
+    <!-- 하단 요약 -->
     <div style="margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+
       <div class="card theme-blue" style="margin: 0;">
         <div class="card-head">
           <div class="icon">💰</div>
@@ -561,18 +504,17 @@
         </div>
         <div class="card-body">
           <div class="script-block" style="margin-bottom: 6px; font-size: 11.5px;">
-            "<strong>자세한 신청방법과 세부내용은 문자로 한번 더 안내 드리겠습니다</strong>"
+            "<strong>자세한 신청 방법과 세부 내용은 문자로 한 번 더 안내드리겠습니다.</strong>"
           </div>
           <div class="tip-box" style="margin-top: 0; font-size: 11px;">
             <strong>💡</strong> 카드사 : 우리카드 / 국민카드 중 선택 → 신청 완료
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <span>멤버십 약정 프로모션 &nbsp;|&nbsp; <strong>Outbound Call Sheet</strong></span>
     <span>[ ] 안의 내용은 상황에 맞게 수정 &nbsp;·&nbsp; 링크 발송 후 반드시 팔로업 일정 확정</span>
